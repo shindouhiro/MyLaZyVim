@@ -21,3 +21,18 @@ end
 map("n", "<C-g>", function()
   Util.terminal({ "lazygit" }, { cwd = Util.root(), esc_esc = false, ctrl_hjkl = false })
 end, { desc = "Lazygit (root dir)" })
+
+-- bookmark
+map("n", "bm", ":Telescope vim_bookmarks all<cr>")
+map("n", "bmc", ":Telescope vim_bookmarks current_file<cr>")
+
+-- Resize with arrows
+map("n", "<Up>", ":resize -2<CR>")
+map("n", "<Down>", ":resize +2<CR>")
+map("n", "<Left>", ":vertical resize -2<CR>")
+map("n", "<Right>", ":vertical resize +2<CR>")
+
+--split
+map("n", "sv", "<C-w>v", { desc = "Go to left window", remap = true })
+map("n", "ss", "<C-w>s", { desc = "Go to left window", remap = true })
+map("n", "so", "<C-w>o", { desc = "Go to left window", remap = true })
