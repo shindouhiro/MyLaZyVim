@@ -17,3 +17,7 @@ local function map(mode, lhs, rhs, opts)
 end
 
 -- map("n", "<C-f>", ":Telescope live_grep<Cr>")
+-- lazygit
+map("n", "<C-g>", function()
+  Util.terminal({ "lazygit" }, { cwd = Util.root(), esc_esc = false, ctrl_hjkl = false })
+end, { desc = "Lazygit (root dir)" })
