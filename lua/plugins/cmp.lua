@@ -7,6 +7,8 @@ return {
     "hrsh7th/cmp-buffer",
     "hrsh7th/cmp-path",
     "saadparwaiz1/cmp_luasnip",
+    "hrsh7th/cmp-vsnip",
+    "hrsh7th/vim-vsnip",
   },
   opts = function()
     vim.api.nvim_set_hl(0, "CmpGhostText", { link = "Comment", default = true })
@@ -37,6 +39,7 @@ return {
       }),
       sources = cmp.config.sources({
         { name = "nvim_lsp" },
+        { name = "vsnip" },
         { name = "luasnip" },
         { name = "buffer" },
         { name = "path" },

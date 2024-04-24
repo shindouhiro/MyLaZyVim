@@ -50,7 +50,8 @@ local lazyterm = function()
   Util.float_term(nil, { cwd = Util.get_root() })
 end
 
-map("n", "<c-t>", lazyterm, { desc = "Terminal (root dir)" })
+map("n", "<c-t>", lazyterm, { desc = "Terminal (Root Dir)" })
+map("t", "<C-t>", "<cmd>close<cr>", { desc = "Hide Terminal" })
 
 -- -- Move Lines
 -- -- map("n", "<A-j>", "<cmd>m .+1<cr>==", { desc = "Move down" })

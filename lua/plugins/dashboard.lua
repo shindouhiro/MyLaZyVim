@@ -28,7 +28,7 @@ return {
           { action = Util.telescope("files"),                                    desc = " Find file",       icon = "📁", key = "f" },
           { action = "ene | startinsert",                                        desc = " New file",        icon = "📝 ", key = "n" },
           { action = "Telescope oldfiles",                                       desc = " Recent files",    icon = " ", key = "r" },
-          { action = "Telescope live_grep",                                      desc = " Find text",       icon = "⌨️, ", key = "g" },
+          { action = "Telescope live_grep",                                      desc = " Find text",       icon = "⌨️", key = "g" },
           { action = [[lua require("lazyvim.util").telescope.config_files()()]], desc = " Config",          icon = "💉", key = "c" },
           { action = 'lua require("persistence").load()',                        desc = " Restore Session", icon = " ", key = "s" },
           { action = "LazyExtras",                                               desc = " Lazy Extras",     icon = " ", key = "x" },
