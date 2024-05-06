@@ -2,7 +2,7 @@
   "uuid": {
     "prefix": "uuid",
     "body": [
-      "uuid hello"
+      "uuid hello test"
     ]
   }
 }

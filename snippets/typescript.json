@@ -1,0 +1,41 @@
+{
+  "snippet": {
+    "prefix": [
+      "vue-install"
+    ],
+    "body": [
+      "import { App } from \"vue\"",
+      "import Table from \"./src/table\"",
+      "import Column from \"./src/column\"",
+      "",
+      "export { Table, Column }",
+      "",
+      "export default {",
+      "install(app: App) {",
+      "app.component(\"STable\", Table)",
+      "app.component(\"SColumn\", Column)",
+      "}",
+      "}"
+    ],
+    "description": "Snippet template."
+  },
+  "vue-template": {
+    "prefix": [
+      "vue-template"
+    ],
+    "body": [
+      "import { defineComponent } from \"vue\"",
+      "",
+      "export default defineComponent({",
+      "name: \"\",",
+      "props: {",
+      "},",
+      "setup(props) {",
+      "return () => (",
+      ")",
+      "}",
+      "})"
+    ],
+    "description": "Snippet template."
+  }
+}

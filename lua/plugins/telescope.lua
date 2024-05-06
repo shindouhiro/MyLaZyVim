@@ -5,7 +5,7 @@ return {
   cmd = "Telescope",
   version = false, -- telescope did only one release, so use HEAD for now
   keys = {
-    { "<C-b>", "<cmd>Telescope buffers<cr>", desc = "Buffers" },
+    -- { "<C-b>", "<cmd>Telescope buffers<cr>", desc = "Buffers" },
     { "<C-p>", Util.telescope("files", { cwd = false }), desc = "Find Files (cwd)" },
     { "<C-f>", Util.telescope("live_grep", { cwd = false }), desc = "Grep (cwd)" },
     { "<C-r>", "<Cmd>Telescope projects<CR>", desc = "Projects" },
