@@ -1,0 +1,14 @@
+{
+  "md-title": {
+    "prefix": [
+      "md-title"
+    ],
+    "body": [
+      "---",
+      "title: $1",
+      "cover: $2",
+      "---"
+    ],
+    "description": "Snippet template."
+  }
+}

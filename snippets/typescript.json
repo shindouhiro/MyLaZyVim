@@ -37,5 +37,14 @@
       "})"
     ],
     "description": "Snippet template."
+  },
+  "mui-message": {
+    "prefix": [
+      "mui-message"
+    ],
+    "body": [
+      "enqueueSnackbar(err, { variant: 'error' })"
+    ],
+    "description": "enqueueSnackbar template."
   }
 }

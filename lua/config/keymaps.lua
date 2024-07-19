@@ -15,7 +15,9 @@ local function map(mode, lhs, rhs, opts)
     vim.keymap.set(mode, lhs, rhs, opts)
   end
 end
-
+-- 检查是否有类似的映射
+vim.keymap.set("x", "s", "<Plug>VSurround")
+vim.keymap.set("x", "S", "<Plug>VgSurround")
 -- map("n", "<C-f>", ":Telescope live_grep<Cr>")
 map("n", "<C-p>", ":Telescope find_files<Cr>")
 map("n", "<C-r>", ":Telescope projects<Cr>")
@@ -50,17 +52,17 @@ local lazyterm = function()
   Util.float_term(nil, { cwd = Util.get_root() })
 end
 
-map("n", "<c-t>", lazyterm, { desc = "Terminal (Root Dir)" })
-map("t", "<C-t>", "<cmd>close<cr>", { desc = "Hide Terminal" })
+map("n", "<c-t>", "<cmd>Lspsaga term_toggle<cr>", { desc = "Terminal (Root Dir)" })
+map("t", "<C-t>", "<cmd>Lspsaga term_toggle<cr>", { desc = "Hide Terminal" })
 
 -- -- Move Lines
--- -- map("n", "<A-j>", "<cmd>m .+1<cr>==", { desc = "Move down" })
--- -- map("n", "<A-k>", "<cmd>m .-2<cr>==", { desc = "Move up" })
--- -- map("i", "<A-j>", "<esc><cmd>m .+1<cr>==gi", { desc = "Move down" })
--- -- map("i", "<A-k>", "<esc><cmd>m .-2<cr>==gi", { desc = "Move up" })
--- -- map("v", "<A-j>", ":m '>+1<cr>gv=gv", { desc = "Move down" })
--- -- map("v", "<A-k>", ":m '<-2<cr>gv=gv", { desc = "Move up" })
--- vim.keymap.del("n", "<A-j>")
--- vim.keymap.del("v", "<A-j>")
--- vim.keymap.del("n", "<A-k>")
--- vim.keymap.del("v", "<A-k>")
+map("n", "<A-j>", "<cmd>m .+1<cr>==", { desc = "Move down" })
+map("n", "<A-k>", "<cmd>m .-2<cr>==", { desc = "Move up" })
+map("i", "<A-j>", "<esc><cmd>m .+1<cr>==gi", { desc = "Move down" })
+map("i", "<A-k>", "<esc><cmd>m .-2<cr>==gi", { desc = "Move up" })
+map("v", "<A-j>", ":m '>+1<cr>gv=gv", { desc = "Move down" })
+map("v", "<A-k>", ":m '<-2<cr>gv=gv", { desc = "Move up" })
+vim.keymap.del("n", "<A-j>")
+vim.keymap.del("v", "<A-j>")
+vim.keymap.del("n", "<A-k>")
+vim.keymap.del("v", "<A-k>")
